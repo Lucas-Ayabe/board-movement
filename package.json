@@ -1,0 +1,17 @@
+{
+    "name": "vanderlei",
+    "version": "1.0.0",
+    "author": "Lucas Akira Ayabe <lucas.ayabe@gmail.com>",
+    "license": "MIT",
+    "source": "src/index.html",
+    "scripts": {
+        "dev": "parcel serve --open",
+        "build": "parcel build"
+    },
+    "devDependencies": {
+        "parcel": "^2.0.0-rc.0"
+    },
+    "dependencies": {
+        "axios": "^0.21.4"
+    }
+}

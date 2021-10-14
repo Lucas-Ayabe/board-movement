@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board Movement</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer type="module" src="assets/js/script.js"></script>
+
+    <style>
+      .board {
+        --square-size: 50px;
+        --square-amount: 10;
+
+        position: relative;
+        display: inline-grid;
+        grid-template-columns: repeat(var(--square-amount), var(--square-size));
+
+        grid-template-rows: var(--square-size);
+
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+      }
+
+      .square {
+        background: #000;
+      }
+
+      .square:nth-child(even) {
+        background: #fff;
+      }
+
+      .board .piece {
+        --piece-size: calc(var(--square-size) / 2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate3d(50%, 50%, 0);
+
+        background: #a0f;
+        border-radius: 50%;
+        width: var(--piece-size);
+        height: var(--piece-size);
+
+        transition: all 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="py:5">
+    <main class="container flow text:center">
+      <article class="board">
+        <div class="piece"></div>
+
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </article>
+
+      <button id="play" class="button">Row Dice</button>
+      <button id="reset" class="button">Reset</button>
+    </main>
+  </body>
+</html>
